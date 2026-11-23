@@ -1,0 +1,18 @@
+# Web 框架
+fastapi>=0.115.0
+uvicorn[standard]>=0.32.0
+python-multipart>=0.0.9
+
+# 数据库（MySQL 异步驱动）
+sqlalchemy>=2.0.0
+aiomysql>=0.2.0
+pymysql>=1.1.0
+
+# 缓存
+redis>=5.0.0
+
+# 密码加密
+# 注意：passlib 1.7.4 与 bcrypt 4.1+ 不兼容（会报 __about__ 属性错误）
+# 因此这里锁定 bcrypt 4.0.x
+passlib>=1.7.4
+bcrypt==4.0.1
