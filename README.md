@@ -47,9 +47,9 @@ toutiao/
 │   │   ├── crud/                       # 数据访问层
 │   │   ├── models/                     # SQLAlchemy 模型
 │   │   ├── schemas/                    # Pydantic 校验模型
-│   │   ├── utils/                      # 认证、密码、异常处理、统一响应
-│   │   └── requirements.txt
+│   │   └── utils/                      # 认证、密码、异常处理、统一响应
 │   └── 项目后端设计说明文档.md
+├── requirements.txt                    # 后端 Python 依赖
 └── README.md
 ```
 
@@ -81,10 +81,11 @@ mysql -u root -p news_app < "项目物料/02-数据库sql文件/database.sql"
 ### 第二步：启动后端
 
 ```bash
-cd 项目物料/toutiao_backend
-
-# 安装依赖
+# 先在仓库根目录安装后端依赖
 pip install -r requirements.txt
+
+# 再进入后端目录
+cd 项目物料/toutiao_backend
 
 # 从模板生成配置文件（模板里不含真实密码）
 copy config\db_conf.example.py config\db_conf.py
